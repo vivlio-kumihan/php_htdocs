@@ -10,7 +10,7 @@
 
 <body>
   <h1>チェックボックスを使ったフォーム</h1>
-  <!-- form => actionで『post』で指定して送信先へデータを送るのがこの1行でやってること。 -->
+  <!-- form => actionで『post』で指定して送信先へのデータを送信をこの1行がやってる。 -->
   <form action="checkbox_receive.php" method="post">
     <p>
       <!-- colors[]とするこで、配列へチェックボックスに印をする度に値がappendされるわけ。 -->
