@@ -13,8 +13,7 @@ try {
   $db_ins = new PDO($dsn, $user, $password);
   $db_ins->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql =
-    <<<SQL
+  $sql = <<<SQL
 SELECT
     `name`,
     `age`,
