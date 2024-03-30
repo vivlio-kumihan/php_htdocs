@@ -17,7 +17,8 @@
     <!-- action属性、method属性に適宜 -->
     <form action="search_receive.php" method="POST">
       <label for="name">お名前を入力してください。</label>
-      <!-- nameなり何なり、SQLで規定している属性名 -->
+      <!-- name属性にSQLで規定している属性名を充てる -->
+      <!-- age, hobby, genderでもなんでも、name属性は一つ。name="ここに書く" -->
       <input id="name" type="text" name="name">
       <button type="submit">検索する</button>
     </form>

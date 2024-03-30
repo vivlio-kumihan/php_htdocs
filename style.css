@@ -11,8 +11,6 @@ h1 {
 }
 
 p {
-  /* width: fit-content;
-  margin: 0 auto; */
   text-align: center;
   line-height: 1.5;
 }
@@ -29,7 +27,7 @@ label {
 
 input {
   width: 300px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #333;
   border-radius: 10px;
 }
@@ -41,22 +39,23 @@ button {
   text-align: center;
   background-color: bisque;
   border-radius: 10px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 button:hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
 dl {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 20px auto;
 }
 
 dl div {
   display: flex;
-  padding: 5px 0
+  padding: 5px 0;
 }
 
 dl div dt {
@@ -88,10 +87,8 @@ ul > li.header {
 }
 
 ul > li.header > .item {
-  padding: .5rem 0;
-
+  padding: 0.5rem 0;
 }
-
 
 ul > li > .item {
   padding: 1rem 0;
@@ -105,4 +102,4 @@ ul > li .item:nth-of-type(1) {
 
 ul > li .item:nth-of-type(2) {
   flex-basis: calc(100% - 50px);
-}
+}/*# sourceMappingURL=style.css.map */
