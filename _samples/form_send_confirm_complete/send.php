@@ -14,7 +14,7 @@
 <body>
   <div class="container">
     <h1>フォームからの送信</h1>
-    <p>次のページへデータを渡すしてみる。</p>
+    <p>次のページへデータを渡してみる。</p>
     <form action="./confirm.php" method="POST">
       <label for="name">氏名</label>
       <input id="name" type="text" name="user_name" />
