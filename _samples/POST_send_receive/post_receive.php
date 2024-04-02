@@ -42,7 +42,9 @@ $subscribe = $_POST['subscribe'];
         <dt>購　読：</dt>
         <dd>
           <?php
-          $response = ($subscribe === 'on') ? "ニュースレターを購読する。" : "ニュースレターは購読しない。" ;
+          $response = ($subscribe === 'on') 
+            ? "ニュースレターを購読する。" 
+            : "ニュースレターは購読しない。" ;
           echo $response;
           ?>
         </dd>
