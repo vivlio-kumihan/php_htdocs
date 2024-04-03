@@ -1,0 +1,19 @@
+// メディアクリエのブレイクポイントを指定する。
+    // `!default`は、既に定義されている場合は、更新されないフラグ。
+    // これを指定しておけば、$breakpointsが更新されることはないらしい。
+$breakpoints: (
+  sm_max: "screen and (max-width: 500px)", // 以下の時に効果が掛かる
+  sm_min: "screen and (min-width: 500px)", // 以上の時に効果が掛かる
+  md: "screen and (min-width: 768px)",     // 以上の時に効果が掛かる
+  lg: "screen and (min-width: 1000px)",    // 以上の時に効果が掛かる
+  xl: "screen and (min-width: 1200px)",    // 以上の時に効果が掛かる
+) !default;
+
+// mixinを設定する。
+// map-get()メソッドで、`$breakpoints`で設定した画面幅のなかで、
+// `$key`に紐づいた値が入る。
+@mixin mq($key) {
+  @media #{ map-get($breakpoints, $key) } {
+      @content;
+  }
+}

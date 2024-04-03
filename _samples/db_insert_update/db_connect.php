@@ -1,4 +1,10 @@
 <!-- DBへ繋げる。 -->
+<!-- 
+  問い合わせる先は『DB』です。
+『テーブル』ではないです。
+
+なのでここでは、DB『member』へアクセスします。 
+-->
 
 <?php 
 $dsn = 'mysql:dbname=member;host=localhost;charset=utf8';
