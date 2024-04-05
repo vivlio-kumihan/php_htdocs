@@ -1,0 +1,127 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+h1 {
+  margin: 4rem 0 1em;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+form {
+  width: 375px;
+  margin: 20px auto 0;
+  font-size: 1rem;
+}
+form input[type=text] {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #333;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+form button {
+  width: 100%;
+  margin-top: 40px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: bisque;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+form button:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+dl {
+  width: 500px;
+  margin: 20px auto;
+  font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  dl {
+    width: 100%;
+  }
+}
+dl div {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px dotted #333;
+  gap: 5px;
+}
+dl div dt, dl div dd {
+  padding: 0.5rem 1rem;
+}
+dl div dt {
+  flex-basis: 8rem;
+}
+dl div dd {
+  flex-basis: calc(100% - 5px - 8rem);
+}
+dl div:nth-of-type(odd) {
+  background-color: rgb(245, 250, 250);
+}
+dl div:first-of-type {
+  border-top: 1px dotted #333;
+}
+@media screen and (max-width: 500px) {
+  dl div {
+    flex-direction: column;
+  }
+  dl div dt, dl div dd {
+    text-align: center;
+  }
+  dl div dt {
+    flex-basis: unset;
+    padding: 0;
+  }
+  dl div dd {
+    padding: 0;
+  }
+  dl div dd.overview {
+    padding: 0 1rem;
+    text-align: justify;
+  }
+}
+
+ul {
+  width: 200px;
+  margin: 0.5rem auto 0;
+}
+ul > li {
+  display: flex;
+  gap: 20px;
+  line-height: 1.5;
+  background-color: antiquewhite;
+  border-bottom: 1px dotted #333;
+}
+ul > li.header {
+  color: #fff;
+  background-color: #999;
+}
+ul > li.header > .item {
+  padding: 0.5rem 0;
+}
+ul > li > .item {
+  padding: 1rem 0;
+}
+ul > li > .item:nth-of-type(1) {
+  flex-basis: 50px;
+  padding-left: 1rem;
+  text-align: right;
+}
+ul > li > .item:nth-of-type(2) {
+  flex-basis: calc(100% - 50px);
+}/*# sourceMappingURL=style.css.map */

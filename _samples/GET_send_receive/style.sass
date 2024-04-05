@@ -1,0 +1,85 @@
+.container 
+  width: 100%
+  margin: 0 auto
+
+h1 
+  margin: 5rem 0 0.5em
+  text-align: center
+  font-size: 1.25rem
+  font-weight: 900
+
+p 
+  text-align: center
+  line-height: 1.5
+
+form 
+  display: flex
+  flex-direction: column
+  align-items: center
+
+label 
+  margin: 20px 0 7px
+
+input 
+  width: 300px
+  padding: .5rem 1rem
+  border: 1px solid #333
+  border-radius: 10px
+
+button 
+  width: 300px
+  margin-top: 40px
+  padding: 10px 20px
+  text-align: center
+  background-color: bisque
+  border-radius: 10px
+  transition: .3s
+
+button:hover 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .5)
+  transform: translateY(-2px)
+
+dl 
+  width: fit-content
+  margin: 20px auto
+
+dl div 
+  display: flex
+  padding: 5px 0
+
+dl div dt 
+  padding: 5px 0.5rem
+
+dl div dd 
+  width: 200px
+  padding: 5px 0.5rem
+  background-color: rgb(222, 240, 200)
+
+ul 
+  width: 200px
+  margin: 0.5rem auto 0
+
+ul > li 
+  display: flex
+  gap: 20px
+  line-height: 1.5
+  background-color: antiquewhite
+  border-bottom: 1px dotted #333
+
+ul > li.header 
+  color: #fff
+  background-color: #999
+
+ul > li.header > .item 
+  padding: .5rem 0
+
+ul > li > .item 
+  padding: 1rem 0
+
+ul > li .item:nth-of-type(1) 
+  flex-basis: 50px
+  padding-left: 1rem
+  text-align: right
+
+ul > li .item:nth-of-type(2) 
+  flex-basis: calc(100% - 50px)

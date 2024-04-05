@@ -1,3 +1,20 @@
+<?php
+$dsn = "mysql:dbname=quad9_comthy_db;host=mysql57.quad9.sakura.ne.jp;charser=utf8";
+$user = "quad9";
+$password = "Bf109tugumi";
+
+try {
+  $dbh = new PDO($dsn, $user, $password);
+  $dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo 'Success connect!';
+} catch (PDOException $e) {
+  print($e -> getMessage());
+  die();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -13,7 +30,11 @@
 
 <body>
   <div class="container">
-    <h1>hello</h1>
+    <h1>say hello</h1>
+    <h1>say hello</h1>
+    <h1>say hello</h1>
+    <h1>say hello</h1>
+    <h1>say hello</h1>
   </div>
 </body>
 
