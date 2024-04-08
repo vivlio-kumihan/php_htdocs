@@ -1,11 +1,8 @@
 <?php 
-
-$dsn = 'mysql:dbname=member;host=localhost;charset=utf8';
-$user = 'root';
-$password = '';
+require_once '../../tmp/conf_common_thyme_jp.php';
 
 try {
-  $dbh = new PDO($dsn, $user, $password);
+  $dbh = new PDO(DSN, DB_USER, DB_PASSWORD);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "SELECT * FROM user";
 
@@ -29,9 +26,9 @@ try {
   //   $data[] = $row;
   // }
   while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    var_dump('<hr>');
-    var_dump($row);
-    // $data[] = $row;
+    // var_dump('<hr>');
+    // var_dump($row);
+    $data[] = $row;
   }
   
   // echo 'The process has been completed!';

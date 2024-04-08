@@ -1,10 +1,8 @@
-<?php 
-$dsn = 'mysql:dbname=member;host=localhost;charset=utf8';
-$user = 'root';
-$password = '';
+<?php
+require_once '../../tmp/conf_common_thyme_jp.php';
 
 try {
-  $dbh = new PDO($dsn, $user, $password);
+  $dbh = new PDO(DSN, DB_USER, DB_PASSWORD);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "SELECT * FROM user";
 

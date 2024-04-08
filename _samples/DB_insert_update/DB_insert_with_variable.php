@@ -1,14 +1,12 @@
-<?php 
-$dsn = 'mysql:dbname=member;host=localhost;charset=utf8';
-$user = 'root';
-$password = '';
+<?php
+require_once '../../tmp/conf_common_thyme_jp.php';
 
 $name = '坂本龍一';
 $age = 76;
 $email = 'sakamoto@ymo.com';
 
 try {
-  $dbh = new PDO($dsn, $user, $password);
+  $dbh = new PDO(DSN, DB_USER, DB_PASSWORD);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "INSERT INTO user (id, name, age, email) VALUES (NULL, :name, :age, :email)";
 

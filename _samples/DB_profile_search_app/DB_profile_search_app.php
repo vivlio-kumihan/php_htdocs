@@ -4,6 +4,8 @@
 -->
 
 <?php
+require_once '../../tmp/conf_common_thyme_jp.php';
+
 // 検索窓に`URL + id`を入力してDBに『GET』でアクセスしてみる。
 // このファイルの場合だと、`http://localhost/DB_member_profile.php?id=1`
 
@@ -16,13 +18,9 @@ if (isset($_GET['id'])) {
 
 // 問い合わせる先は『DB』です。『テーブル』ではないです。
 // なのでここでは、DB『member』へアクセスします。 
-$dsn = 'mysql:dbname=member;host=localhost;charset=utf8';
-$user = 'root';
-$password = '';
-$data = [];
 
 try {
-  $dbh = new PDO($dsn, $user, $password);
+  $dbh = new PDO(DSN, DB_USER, DB_PASSWORD);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // ヒアドキュメントでSQLをわかりやすくする。
@@ -99,7 +97,7 @@ SQL;
         </div>
         <div>
           <dt>活動概要</dt>
-          <dd class="overview"><?php echo n12br(htmlspecialchars($row['overview'], ENT_QUOTES, 'UTF-8')); ?></dd>
+          <dd class="overview"><?php echo nl2br(htmlspecialchars($row['overview'], ENT_QUOTES, 'UTF-8')); ?></dd>
         </div>
       </dl>
     </div>
